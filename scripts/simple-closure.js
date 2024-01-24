@@ -6,5 +6,6 @@ function makeFunc() {
     return dispName;
 }
 
+// f here is not a function but a closure
 const f = makeFunc();
 f();

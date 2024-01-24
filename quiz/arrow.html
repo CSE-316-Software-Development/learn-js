@@ -12,14 +12,17 @@
     <script>
         const obj = {
             msg: 'Hello World',
-            hello:  function() {
+            //create a regular function is better
+            hello: function() {
                 document.getElementById('demo').innerHTML += this.msg;
             }
         };
         window.addEventListener('load', function() {
+            alert(this);
             obj.hello();
         });
-        document.getElementById('btn').addEventListener('click', function() {
+        document.getElementById('btn').addEventListener('click', () => {
+            alert(this);
             obj.hello();
         });
     </script>
