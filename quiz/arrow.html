@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow vs. Regular</title>
+</head>
+<body>
+    <div id="root">
+        <button id="btn"> Click Me! </button>
+        <p id="demo"> DEMO </p>
+    </div>
+    <script>
+        const obj = {
+            msg: 'Hello World',
+            hello:  function() {
+                document.getElementById('demo').innerHTML += this.msg;
+            }
+        };
+        window.addEventListener('load', function() {
+            obj.hello();
+        });
+        document.getElementById('btn').addEventListener('click', function() {
+            obj.hello();
+        });
+    </script>
+</body>
+</html>

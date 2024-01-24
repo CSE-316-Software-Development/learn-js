@@ -7,4 +7,3 @@ const person = {
 
 let x = person.fullName();
 console.log(x);
- 
