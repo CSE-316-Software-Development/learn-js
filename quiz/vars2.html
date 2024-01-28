@@ -3,11 +3,14 @@
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
             for (var i = 0; i < 5; i++) {
-                // setTimeout executes the function after 5 ms
-                setTimeout(function() {
-                    console.log(i);
-                }, 0);
+                // Using an IIFE (Immediately Invoked Function Expression) to capture the current value of i
+                (function(index) {
+                    setTimeout(function() {
+                        console.log(index);
+                    }, 0);
+                })(i);
             }
+
         </script>
     </head>
     <body>
