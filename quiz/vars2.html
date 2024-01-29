@@ -2,10 +2,10 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
+            for (let i = 0; i < 5; i++) { // changed var i = 0 to let i = 0 (KS)
                 // setTimeout executes the function after 5 ms
-                setTimeout(function() {
-                    console.log(i);
+                setTimeout(function() { // setTimeout is an API call. lookup
+                    console.log(i); // each time we console log it, we get 5, not 0, 1, 2, 3, 4, 5. 
                 }, 0);
             }
         </script>
