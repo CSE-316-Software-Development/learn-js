@@ -2,12 +2,12 @@
     <head>
         <script>
             // Fix the error in the code below 
-            let x = 1;
+            let x = 1;  
             var y = 2;
             {
-                y = y + 1;
+                y = y + 1; // cannot access y before initialization, Reference Error, using before line 10! 
                 console.log(x+y);
-                let y = 2;
+                var y = 2; // change from let y = 2 to var y = 2
             }
             console.log(x);
             console.log(y);
