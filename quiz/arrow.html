@@ -12,17 +12,10 @@
     <script>
         const obj = {
             msg: 'Hello World',
-            hello: function() {
-                document.getElementById('demo').innerHTML += this.msg;
-            }
-        };
-        window.addEventListener('load', () => {
             alert(this)
-            obj.hello();
         });
         document.getElementById('btn').addEventListener('click', () => {
             alert(this) // this would be window as it's an arrow function and window is its lexical scope
-            obj.hello();
         });
     </script>
 </body>

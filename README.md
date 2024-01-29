@@ -13,4 +13,3 @@ to access a var variable before declaring them
 
 const: can change the values inside the reference (something inside the array)
 but cannot change the reference object
-

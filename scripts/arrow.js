@@ -4,9 +4,17 @@ const person = {
  lastName: 'Hopper',
  age: 89,
  fullName: () => { return this.firstName + ' ' + this.lastName }
+const o = {
+    msg: 'An object',
+    person: {
+        firstName: 'Grace',
+        lastName: 'Hopper',
+        age: 89,
+        fullName: () => { return this.firstName + ' ' + this.lastName }
+    }
 }
 
-let x = person.fullName();
+let x = o.person.fullName();
 console.log(x);
 
 // don't use arrow function with (this) inside the object
