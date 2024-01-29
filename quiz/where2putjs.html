@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script>
-        document.getElementById("demo").textContent = "A paragraph";
-        function myFunction() {
-            document.getElementById("demo").textContent = "Paragraph changed after click.";
-        }
-    </script>
+    
 </head>
 <body>
 <div id="root">
@@ -17,6 +12,11 @@
     <p id="demo"> Placeholder ... </p>
     <button type="button" onclick="myFunction()">Try it</button>
 </div>
-
+<script>
+    document.getElementById("demo").textContent = "A paragraph";
+    function myFunction() {
+        document.getElementById("demo").textContent = "Paragraph changed after click.";
+    }
+</script>
 </body>
 </html>
