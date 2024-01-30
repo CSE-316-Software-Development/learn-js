@@ -10,16 +10,19 @@
         <p id="demo"> DEMO </p>
     </div>
     <script>
+        this.msg = 'Helloooooo Worlddddddd '
         const obj = {
             msg: 'Hello World',
             hello:  () => {
                 document.getElementById('demo').innerHTML += this.msg;
             }
         };
-        window.addEventListener('load', () => {
+        window.addEventListener('load', function() {
+            console.log(this);
             obj.hello();
         });
-        document.getElementById('btn').addEventListener('click', () => {
+        document.getElementById('btn').addEventListener('click', function() {
+            console.log(this);
             obj.hello();
         });
     </script>

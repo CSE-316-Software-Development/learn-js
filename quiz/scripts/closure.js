@@ -1,9 +1,11 @@
 function setColor(set) {
-        let changeColor = set;
+    let changeColor = set;
+    return () => {
         if(changeColor) {
             let userColor = document.getElementById('color').value;
             document.getElementById('myPara').style.color = userColor;
         }
+    }   
         
 }
 
