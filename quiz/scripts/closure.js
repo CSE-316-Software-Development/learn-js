@@ -1,6 +1,6 @@
 function setColor(set) {
         let changeColor = set;
-        return () => { // added (KS), need to return a closure!
+        return () => { // added (KS), need to return a closure! could do either return () => OR return fucntion() 
             if(changeColor) {
             let userColor = document.getElementById('color').value;
             document.getElementById('myPara').style.color = userColor;
