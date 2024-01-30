@@ -12,15 +12,17 @@
     <script>
         const obj = {
             msg: 'Hello World',
-            hello:  () => {
+            hello:  function() {
                 document.getElementById('demo').innerHTML += this.msg;
             }
         };
         window.addEventListener('load', () => {
             obj.hello();
+            console.log(this);
         });
         document.getElementById('btn').addEventListener('click', () => {
             obj.hello();
+            console.log(this);
         });
     </script>
 </body>
