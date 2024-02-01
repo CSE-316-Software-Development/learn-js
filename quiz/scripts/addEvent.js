@@ -1,18 +1,18 @@
 window.onload = function() {
     let x = document.getElementById('myBtn');
-    x.addEventListener('mouseover', myFunction('Moused over!'));
-    x.addEventListener('click', mySecondFunction('Clicked!'));
-    x.addEventListener('mouseout', myThirdFunction('Moused out!'));
+    x.addEventListener('mouseover', myFunction);
+    x.addEventListener('click', mySecondFunction);
+    x.addEventListener('mouseout', myThirdFunction);
 }
 
-function myFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function myFunction() {
+    document.getElementById('demo').textContent = "Moused over!";
 }
 
-function mySecondFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function mySecondFunction() {
+    document.getElementById('demo').textContent = "Clicked!";
 }
 
-function myThirdFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function myThirdFunction() {
+    document.getElementById('demo').textContent = 'Moused out!';
 }

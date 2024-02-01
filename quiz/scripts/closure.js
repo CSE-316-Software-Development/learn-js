@@ -9,5 +9,5 @@ function setColor(set) {
 
 window.onload = function() {
     let toggle = true;
-    document.getElementById('btn').onclick = setColor(toggle);
+    document.getElementById('btn').onclick = ()=>setColor(toggle);
 }
