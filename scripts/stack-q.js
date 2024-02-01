@@ -2,7 +2,6 @@ class PStack {
   #id;
   constructor() {
     this.#id = 1;
-    this.persons = [];
   }
 
   showId() {
@@ -37,4 +36,3 @@ pstack.push({name: 'Dein', age: 19});
 console.log(pstack.pop());
 console.log(pstack.pop());
 console.log(pstack.show());
-console.log(pstack.persons);
