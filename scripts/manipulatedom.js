@@ -2,9 +2,10 @@ window.onload = function() {
   document.getElementById('addTableBtn').addEventListener('click', addTable);
 }
 
+// assume it is a list of code with columns
 function createTRNode(colNodes) {
   let trNode = document.createElement("tr");
-  colNodes.forEach(function(colNode) {
+  colNodes.forEach(function(colNode) { // in each TR, there is a list of TD
     trNode.appendChild(colNode);
   })
   return trNode;
@@ -12,15 +13,18 @@ function createTRNode(colNodes) {
 
 function createTDNode(childNode) {
   let tdNode = document.createElement("td");
-  tdNode.appendChild(childNode);
+  tdNode.classList.add(tdNode); // add css style to this node
+  tdNode.appendChild(childNode); // anything
   return tdNode;
 }
 
+// pre-defined
 function createTxtNode(txt) {
   let txtNode = document.createTextNode(txt);
   return txtNode;
 }
 
+// want three nodes, so iterate
 function addTable() {
   const tableNode = document.createElement("table");
   for(let i = 0; i < 3; i++) {
