@@ -3,7 +3,7 @@ function makeFunc() {
     function dispName() {
         console.log(name);
     }
-    return dispName;
+    return dispName; // a closure
 }
 
 const f = makeFunc();
