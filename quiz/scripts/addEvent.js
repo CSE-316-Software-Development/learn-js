@@ -1,8 +1,8 @@
 window.onload = function() {
     let x = document.getElementById('myBtn');
-    x.addEventListener('mouseover', myFunction('Moused over!'));
-    x.addEventListener('click', mySecondFunction('Clicked!'));
-    x.addEventListener('mouseout', myThirdFunction('Moused out!'));
+    x.addEventListener('mouseover', function() { myFunction('Moused over!') });
+    x.addEventListener('click', function() { mySecondFunction('Clicked!') });
+    x.addEventListener('mouseout', function() { myThirdFunction('Moused out!') });
 }
 
 function myFunction(msg) {

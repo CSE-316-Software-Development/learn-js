@@ -8,7 +8,6 @@ class PStack {
   showId() {
     return this.#id;
   }
-
 }
 
 class PStackImpl extends PStack {
@@ -17,17 +16,23 @@ class PStackImpl extends PStack {
   }
 
   push(p) {
-    return this._persons.push(p)
+    this._persons.push(p); // Corrected: Push the person object into the _persons array
   }
 
   pop() {
-    return this._persons.pop().age
+    const person = this._persons.pop(); // Corrected: Pop the person object from the _persons array
+    return person ? person.age : undefined; // Corrected: Return the age of the popped person object if it exists
+  }
+
+  get persons() {
+    return this._persons; // Getter method to access the _persons array
   }
 }
 
 let pstack = new PStackImpl();
-pstack.persons = [{name: 'Jojo', age: 21}, {name: 'Gabi', age: 29}]
-pstack.push({name: 'Dein', age: 19});
-console.log(pstack.pop());
-console.log(pstack.pop());
-console.log(pstack.persons);
+pstack.push({ name: 'Jojo', age: 21 });
+pstack.push({ name: 'Gabi', age: 29 });
+pstack.push({ name: 'Dein', age: 19 });
+console.log(pstack.pop()); // Output: 19
+console.log(pstack.pop()); // Output: 29
+console.log(pstack.persons); // Output: [{ name: 'Jojo', age: 21 }]
