@@ -10,7 +10,7 @@ function createTRNode(colNodes) {
   return trNode;
 }
 
-function createTDNode(childNode) {
+function createTDNode(childNode, id) {
   let tdNode = document.createElement("td");
   tdNode.id = id;
   tdNode.classList.add('tdNode');
@@ -24,9 +24,9 @@ function createTxtNode(txt) {
 }
 
 function createButtonNode(txt, index='') {
-  let btnNode = document.createElement('button');
+  const btnNode = document.createElement('button');
   btnNode.innerText = txt;
-  btnNode.onClick = () => {
+  btnNode.onclick = () => {
     handleEditTextClick(index);
   }
   return btnNode;
@@ -34,16 +34,15 @@ function createButtonNode(txt, index='') {
 
 function handleEditTextClick(index) {
   let cell = document.getElementById(`col - ${index}`);
-  // replace input with text
-  cell.innerHTML = '<input type = "text" placeholder = "Enter Cell(x,y)"';
+  cell.innerHTML = '<input type="text" placeholder = "Enter Cell(x,y)">';
 }
 
 function addTable() {
   const tableNode = document.createElement("table");
   for(let i = 0; i < 3; i++) {
-    let col1 = createTDNode(createTxtNode("Cell (" + i + ", 0)", `col - ${i}`));
-    let col2 = createTDNode(createbtnNode('Edit text',i));
-    tableNode.appendChild(createTRNode([col1,col2]));
+    let col1 = createTDNode(createTxtNode("Cell (" + i + ", 0)"), `col - ${i}`);
+    let col2 = createTDNode(createButtonNode('Edit text', i))
+    tableNode.appendChild(createTRNode([col1, col2]));
   }
   document.getElementById("root").appendChild(tableNode);
 }
