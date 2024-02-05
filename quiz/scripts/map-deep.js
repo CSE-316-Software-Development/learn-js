@@ -15,4 +15,15 @@ const originalMatrix = [
   // Displaying the original and new matrices
   console.log('Original Matrix (modified):', originalMatrix);
   console.log('New Matrix (unaffected):', newMatrix);
-  
+
+  // change the original array would change the new array as the map returns a shallow copy
+    // and the reference is pointed to the changed original array
+
+    const newDeepMatrix = originalMatrix.map((row) => {
+        return [...row].sort(); // doing a shallow copy of each row
+    })
+
+    originalMatrix[0][2] = 55;
+
+    console.log('Original Matrix (modified):', originalMatrix);
+    console.log('newDeepMatrix (unaffected):', newDeepMatrix);
