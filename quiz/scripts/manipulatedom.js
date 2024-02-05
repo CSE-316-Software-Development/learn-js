@@ -21,11 +21,18 @@ function createTxtNode(txt) {
   return txtNode;
 }
 
+   
+
 function addTable() {
   const tableNode = document.createElement("table");
   for(let i = 0; i < 3; i++) {
     let col1 = createTDNode(createTxtNode("Cell (" + i + ", 0)"));
     tableNode.appendChild(createTRNode([col1]));
+    let editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.addEventListener('click', ()=> createTxtNode("edit"));
+    let col2 = createTDNode(editButton);
+    tableNode.appendChild(createTRNode([col1, col2]));
   }
   document.getElementById("root").appendChild(tableNode);
 }
