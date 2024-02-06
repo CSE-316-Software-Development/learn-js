@@ -1,18 +1,21 @@
 <html>
-    <head>
-        <script>
-            // Fix all errors in the code below
-            const PI = 3.14159;
-            {
-                let radius = 5;
-                let area = PI * radius * radius;
-                PI = 3.0;
-            }
-            console.log(area);
+<head>
+    <script>
+        // Fix all errors in the code below
+        const PI = 3.14159; // Define PI as a constant
+        let area; // Declare area outside the block scope
 
-        </script>
-    </head>
-    <body>
-        <h1> A Web Page </h1>
-    </body>
+        {
+            let radius = 5;
+            area = PI * radius * radius; // Assign value to area
+            // Cannot reassign a value to a constant
+            // PI = 3.0; // Remove this line
+        }
+        console.log(area); // Log the value of area
+
+    </script>
+</head>
+<body>
+<h1> A Web Page </h1>
+</body>
 </html>

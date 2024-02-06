@@ -1,20 +1,20 @@
 <html>
-    <head>
-        <script>
-            // Fix the error in the code below 
-            let x = 1;
-            var y = 2;
-            {
-                y = y + 1;
-                console.log(x+y);
-                let y = 2;
-            }
-            console.log(x);
-            console.log(y);
+<head>
+    <script>
+        // Fix the error in the code below
+        let x = 1;
+        var y = 2;
+        {
+            let y = 2; // Declare y within the block scope
+            y = y + 1; // Increment the value of y
+            console.log(x + y); // Print the sum of x and y
+        }
+        console.log(x); // Print the value of x
+        console.log(y); // Print the value of y (global scope)
 
-        </script>
-    </head>
-    <body>
-        <h1> A Web Page </h1>
-    </body>
+    </script>
+</head>
+<body>
+<h1> A Web Page </h1>
+</body>
 </html>
