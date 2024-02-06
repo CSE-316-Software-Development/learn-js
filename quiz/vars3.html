@@ -2,11 +2,12 @@
     <head>
         <script>
             // Fix all errors in the code below
-            const PI = 3.14159;
+            let PI = 3.14159; // change const to let (done KS)
+            let area = 0; // addded this line (done KS)
             {
                 let radius = 5;
-                let area = PI * radius * radius;
-                PI = 3.0;
+                let area = PI * radius * radius; // we have not defined area yet! added line 6 to declare let area;
+                PI = 3.0; // error here because we are trying to reinitialize a CONST! Cant change its value. 
             }
             console.log(area);
 
