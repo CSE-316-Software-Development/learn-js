@@ -2,8 +2,14 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
+            // changing var to let:
+            // takes the current value of let instead of the value after the loop (var)
+            // because after the for loop, if using let, the i doesn't exist so it gives the current value
+            // but if it's var we still access the i value after the for loop
+            // so we will get 5 (the final value of i)
+            for (let i = 0; i < 5; i++) {
                 // setTimeout executes the function after 5 ms
+                // execute after the for loop
                 setTimeout(function() {
                     console.log(i);
                 }, 0);

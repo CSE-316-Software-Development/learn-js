@@ -1,5 +1,5 @@
 class PStack {
-  #id;
+  #id;  // '#' -> private field name
   constructor() {
     this.#id = Math.floor(Math.random() * 100) + 1;
   }
@@ -10,17 +10,29 @@ class PStack {
   }
 
   push(p) {
+<<<<<<< HEAD
+
+  }
+
+  pop() {
+
+=======
     // implement in child class
   }
 
   pop() {
     // implement in child class
+>>>>>>> 60ad76f93bf67f0550282e84b19b906cb9f3b603
   }
 
 }
 
 class PStackImpl extends PStack {
+<<<<<<< HEAD
+  #persons = [];
+=======
   #persons = []
+>>>>>>> 60ad76f93bf67f0550282e84b19b906cb9f3b603
   constructor() {
     super();
   }

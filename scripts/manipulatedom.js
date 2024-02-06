@@ -12,7 +12,7 @@ function createTRNode(colNodes) {
 
 function createTDNode(childNode) {
   let tdNode = document.createElement("td");
-  tdNode.classList.add('tdNode');
+  tdNode.classList.add('tdNode'); // classList: list of classes for this element
   tdNode.appendChild(childNode);
   return tdNode;
 }
