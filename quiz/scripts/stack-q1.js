@@ -9,6 +9,14 @@ class PStack {
     return this.#id;
   }
 
+  get persons() {
+    return this._persons.slice();
+  }
+
+  addPerson(person) {
+    this._persons.push(person);
+  }
+
 }
 
 class PStackImpl extends PStack {
@@ -21,6 +29,10 @@ class PStackImpl extends PStack {
   }
 
   pop() {
+    if (this.persons.length === 0) {
+      console.error('No persons to pop.');
+      return NaN;
+    }
     return this._persons.pop().age
   }
 }
